@@ -1,5 +1,5 @@
-Udemy Bootcamp Project 2022.
+Hacker News app.
 
 JSON Hacker News data is parsed & displayed in the app. 
 
-SwiftUI.
+using SwiftUI.
