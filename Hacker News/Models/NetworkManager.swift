@@ -10,7 +10,6 @@ import Foundation
 class NetworkManager: ObservableObject {
     
     @Published var posts = [Post]()
-//    property that other objects are listening to.
     
     func fetchData() {
         
@@ -22,9 +21,7 @@ class NetworkManager: ObservableObject {
                         let decoder = JSONDecoder()
                         do {
                             let results = try decoder.decode(Results.self, from: safeData)
-                            
-// As we use @Published, we must fetch the MAIN thread.
-                            
+
                             DispatchQueue.main.async {
                                 self.posts = results.hits
                             }
