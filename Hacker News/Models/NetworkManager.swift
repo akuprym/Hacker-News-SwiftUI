@@ -30,7 +30,6 @@ class NetworkManager: ObservableObject {
                         }
                     }
                 }
-                
             }
             task.resume()
         }
