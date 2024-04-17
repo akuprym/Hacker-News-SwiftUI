@@ -23,8 +23,6 @@ class NetworkManager: ObservableObject {
                         do {
                             let results = try decoder.decode(Results.self, from: safeData)
                             
-// As we use @Published, we must fetch the MAIN thread.
-                            
                             DispatchQueue.main.async {
                                 self.posts = results.hits
                             }
